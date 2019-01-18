@@ -1,0 +1,33 @@
+page-home {
+    .home-title {
+        font-size: 3rem;
+        margin: auto;
+        text-align: center;
+    }
+    .first-row {
+        height: 100%;
+    }
+    .profile-image {
+        width: 30px;
+        height: 30px; // border-radius: 50%;
+        margin: auto;
+    }
+    .list-row {
+        margin: auto; // height: ;
+        .item-image {
+            img {
+                width: 80px;
+                height: 80px;
+                margin: auto;
+            }
+        }
+        .item-title {
+            span {
+                margin: auto;
+                font-size: 18px;
+                padding: 10px 0px;
+                font-weight: bold;
+            }
+        }
+    }
+}

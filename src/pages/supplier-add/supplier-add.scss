@@ -1,0 +1,71 @@
+page-supplier-add {
+    .first-row{
+        height: 100%;
+    }
+    #userProfile {
+        width: 70%;
+        height: 380px;
+        margin: auto;
+    }
+    .signin-first {
+        margin-top: 40px !important;
+    }
+    .user-input-row {
+        margin-top: 10px;
+        margin-bottom: 10px;
+        .add-picture {
+            ion-icon {
+                font-size: 2.5rem;
+                margin: auto;
+                font-weight: bold;
+            }
+            .picture-span {
+                margin: auto;
+                text-align: center;
+                width: 100%;
+                border: 1px solid black;
+                padding: 5px 0px;
+            }
+        }
+    }
+    #add_supplier {
+        display: none;
+    }
+    .profile-image {
+        margin-bottom: 25px;
+        span {
+            margin: auto;
+            margin-right: 10px;
+        }
+        ion-icon {
+            margin: auto;
+            font-size: 4.5rem;
+            margin-left: unset;
+        }
+        img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+        }
+    }
+    .photo-error {
+        span {
+            margin: auto;
+            color: red;
+        }
+    }
+    .footer-component {
+        height: 70px;
+        .footer-icon {
+            ion-icon {
+                font-size: 3rem;
+                margin: auto;
+            }
+        }
+        .footer-span {
+            span {
+                margin: auto;
+            }
+        }
+    }
+}

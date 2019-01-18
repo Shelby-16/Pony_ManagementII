@@ -1,0 +1,128 @@
+<!--
+  Generated template for the MyProfilePage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-row class="header-component">
+    <ion-col col-2></ion-col>
+
+    <ion-col col-8>
+    </ion-col>
+
+    <ion-col col-2>
+      <ion-row class="full-height">
+        <ion-icon name="md-log-out" (click)="logout()"></ion-icon>
+      </ion-row>
+    </ion-col>
+
+  </ion-row>
+
+</ion-header>
+
+
+<ion-content padding>
+  <ion-row class="first-row">
+    <ion-row class="profile-image">
+      <ion-row class="image-row">
+        <img src="{{userData.image}}" />
+      </ion-row>
+      <ion-row class="image-title">
+        <span>My Profile</span>
+      </ion-row>
+    </ion-row>
+
+    <ion-row class="each-profile first-profile">
+      <ion-col col-1>
+      </ion-col>
+      <ion-col col-9>
+        <ion-row class="full-height border-row">
+          <span class="profile-name" *ngIf="nameState">
+            {{userData.username}}
+          </span>
+          <input type="text" placeholder="Username" class="profile-input" [(ngModel)]="userData.username" *ngIf="!nameState">
+        </ion-row>
+      </ion-col>
+      <ion-col col-2>
+        <ion-row class="full-height">
+          <ion-icon name="md-create" class="edit-icon" (click)="editUsername()" *ngIf="nameState"></ion-icon>
+          <ion-icon name="md-checkmark-circle" class="change-icon" (click)="changeUsername()" *ngIf="!nameState"></ion-icon>
+        </ion-row>
+      </ion-col>
+    </ion-row>
+
+    <ion-row class="each-profile">
+      <ion-col col-1>
+      </ion-col>
+      <ion-col col-9>
+        <ion-row class="full-height border-row">
+          <span class="profile-name" *ngIf="emailState">
+            {{userData.surname}}
+          </span>
+          <input type="text" placeholder="Surname" class="profile-input" [(ngModel)]="userData.surname" *ngIf="!emailState">
+        </ion-row>
+      </ion-col>
+      <ion-col col-2>
+        <ion-row class="full-height">
+          <ion-icon name="md-create" class="edit-icon" (click)="editSurname()" *ngIf="emailState"></ion-icon>
+          <ion-icon name="md-checkmark-circle" class="change-icon" (click)="changeSurname()" *ngIf="!emailState"></ion-icon>
+        </ion-row>
+      </ion-col>
+    </ion-row>
+
+    <ion-row class="each-profile">
+      <ion-col col-1>
+      </ion-col>
+      <ion-col col-9>
+        <ion-row class="full-height border-row">
+          <span class="profile-name" *ngIf="phoneState">
+            {{userData.phonenumber}}
+          </span>
+          <input type="text" placeholder="Phone Number" class="profile-input" [(ngModel)]="userData.phonenumber" *ngIf="!phoneState">
+        </ion-row>
+      </ion-col>
+      <ion-col col-2>
+        <ion-row class="full-height">
+          <ion-icon name="md-create" class="edit-icon" (click)="editPhone()" *ngIf="phoneState"></ion-icon>
+          <ion-icon name="md-checkmark-circle" class="change-icon" (click)="changePhone()" *ngIf="!phoneState"></ion-icon>
+        </ion-row>
+      </ion-col>
+    </ion-row>
+
+    <ion-row class="each-profile">
+      <ion-col col-1>
+      </ion-col>
+      <ion-col col-9>
+        <ion-row class="full-height border-row">
+          <span class="change-picture" (click)="changeProfilePicture()">
+            Change Picture
+          </span>
+        </ion-row>
+      </ion-col>
+      <ion-col col-2>
+      </ion-col>
+    </ion-row>
+
+
+  </ion-row>
+</ion-content>
+
+<ion-footer>
+  <ion-row class="footer-component">
+    <ion-col col-3>
+    </ion-col>
+    <ion-col col-6></ion-col>
+    <ion-col col-3>
+      <ion-row class="full-height">
+        <ion-row class="footer-icon">
+          <ion-icon name="ios-home" (click)="gotoHome()"></ion-icon>
+        </ion-row>
+        <ion-row class="footer-span">
+          <span (click)="gotoHome()">HOME</span>
+        </ion-row>
+      </ion-row>
+    </ion-col>
+  </ion-row>
+</ion-footer>
