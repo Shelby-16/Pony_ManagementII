@@ -32,6 +32,9 @@ export class SupplierDetailPage {
   public surnameState = true;
   public phoneState = true;
 
+  public firstLetter: any;
+
+
   public phoneControl = new FormControl('', [
     Validators.required,
     Validators.pattern('[0-9]{1,20}$')
@@ -60,15 +63,15 @@ export class SupplierDetailPage {
 
   getSupplierData() {
     let companyName = localStorage.getItem('companyName');
+    this.firstLetter = companyName.charAt(0).toUpperCase();
     this.dataProvider.getSupplierWithCompanyName(companyName).snapshotChanges().subscribe(
       (supData) => {
-        if (localStorage.getItem('companyName') != "" && typeof (localStorage.getItem('companyName')) != "undefined") {
-          this.eachUser = supData.payload.val();
+        this.eachUser = supData.payload.val();
+        if (this.eachUser == null) {
+          this.navCtrl.setRoot('HomePage');
+        } else {
           this.supplierData = this.eachUser;
           this.enableShow = true;
-          console.log(this.supplierData);
-        } else {
-
         }
         this.loading.hide();
       }, (error) => {
@@ -243,6 +246,14 @@ export class SupplierDetailPage {
 
   seeProduct() {
     this.navCtrl.push('ProductListPage');
+  }
+
+  clickBack() {
+    this.navCtrl.pop();
+  }
+
+  gotoHome() {
+    this.navCtrl.push('HomePage');
   }
 
 }

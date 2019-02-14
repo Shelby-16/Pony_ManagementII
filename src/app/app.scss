@@ -27,6 +27,16 @@ ion-row {
 
 .header-component {
     height: 50px;
+    .home-title {
+        margin: auto;
+        font-size: 2.5rem;
+        font-weight: bold;
+    }
+    ion-icon {
+        margin: auto;
+        font-size: 3rem;
+        margin-left: unset;
+    }
 }
 
 .full-height {
@@ -50,19 +60,6 @@ ion-row {
     }
 }
 
-.header-component {
-    .home-title {
-        margin: auto;
-        font-size: 2.5rem;
-        font-weight: bold;
-    }
-    ion-icon {
-        margin: auto;
-        font-size: 3rem;
-        margin-left: unset;
-    }
-}
-
 ion-content {
     font-family: Georgia !important;
     mat-form-field {
@@ -72,6 +69,35 @@ ion-content {
     input {
         font-family: Georgia !important;
         font-weight: bold !important;
+    }
+}
+
+.expantion-list {
+    width: 100%;
+    margin: 5px 0px;
+    .exantion-title {
+        background-color: #9fc5f8;
+        padding: 5px 0px;
+        span {
+            padding-left: 7px;
+            font-weight: bold;
+            margin: auto;
+            font-size: 1.8rem;
+            text-align: center;
+        }
+    }
+    .company-name {
+        background-color: white;
+        padding: 3px 10px;
+        width: 96%; // border-radius: 5px;
+        margin-left: auto;
+        margin-right: auto;
+        span {
+            padding: 3px 3px;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+            width: 100%;
+            height: 25px;
+        }
     }
 }
 
@@ -186,6 +212,21 @@ form {
 button {
     font-family: Georgia !important;
     height: 45px;
+}
+
+.footer-component {
+    height: 70px;
+    .footer-icon {
+        ion-icon {
+            font-size: 3rem;
+            margin: auto;
+        }
+    }
+    .footer-span {
+        span {
+            margin: auto;
+        }
+    }
 }
 
 .expantion-list {
